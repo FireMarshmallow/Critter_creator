@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critter Creator</title>
+</head>
+
+<body>
+    
+    <button class="butt"> <a href="/CritterCreator/">Creat new Critter</a></button>
+    <div class="all">
+        <div class="head" id="img">
+            <h3>Head of a</h3>
+            <a href={{ link_to_animal_1 }}>
+                <H3>{{ name_of_animal_1 }}</H3>
+            </a>
+            <a href={{ link_to_animal_1 }}><img
+                    src={{ image_of_animal_1 }} alt="no_image"></a>
+        </div>
+        <div class="teeth" id="img">
+            <h3>Teeth of a</h3>
+            <a href={{ link_to_animal_2 }}>
+                <H3>{{ name_of_animal_2 }}</H3>
+            </a>
+            <a href={{ link_to_animal_2 }}><img
+                    src={{ image_of_animal_2 }} alt="no_image"></a>
+        </div>
+        <div class="eyes" id="img">
+            <h3>Eyes of a</h3>
+            <a href={{ link_to_animal_3 }}>
+                <H3>{{ name_of_animal_3 }}</H3>
+            </a>
+            <a href={{ link_to_animal_3 }}><img
+                    src={{ image_of_animal_3 }} alt="no_image"></a>
+        </div>
+        <div class="tougue" id="img">
+            <h3>Tougue of a</h3>
+            <a href={{ link_to_animal_4 }}>
+                <H3>{{ name_of_animal_4 }}</H3>
+            </a>
+            <a href={{ link_to_animal_4 }}><img
+                    src={{ image_of_animal_4 }} alt="no_image"></a>
+        </div>
+        <div class="arms" id="img">
+            <h3>Arms of a</h3>
+            <a href={{ link_to_animal_5 }}>
+                <H3>{{ name_of_animal_5 }}</H3>
+            </a>
+            <a href={{ link_to_animal_5 }}><img
+                    src={{ image_of_animal_5 }} alt="no_image"></a>
+        </div>
+        <div class="body" id="img">
+            <h3>Body of a</h3>
+            <a href={{ link_to_animal_6 }}>
+                <H3>{{ name_of_animal_6 }}</H3>
+            </a>
+            <a href={{ link_to_animal_6 }}><img
+                    src={{ image_of_animal_6 }} alt="no_image"></a>
+        </div>
+        <div class="legs" id="img">
+            <h3>Legs of a</h3>
+            <a href={{ link_to_animal_7 }}>
+                <H3>{{ name_of_animal_7 }}</H3>
+            </a>
+            <a href={{ link_to_animal_7 }}><img
+                    src={{ image_of_animal_7 }} alt="no_image"></a>
+        </div>
+        <div class="feet" id="img">
+            <h3>Feet of a</h3>
+            <a href={{ link_to_animal_8 }}>
+                <H3>{{ name_of_animal_8 }}</H3>
+            </a>
+            <a href={{ link_to_animal_8 }}><img
+                    src={{ image_of_animal_8 }} alt="no_image"></a>
+        </div>
+    </div>
+
+</body>
+<style>
+    .head,
+    .teeth,
+    .eyes,
+    .tougue,
+    .arms,
+    .body,
+    .legs,
+    .feet{
+        text-align: center;
+    }
+
+    .all {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 4px 4px;
+        grid-template-areas:
+            ". ."
+            ". ."
+            ". ."
+            ". .";
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
+</style>
+
+</html>
