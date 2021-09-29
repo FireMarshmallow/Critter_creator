@@ -18,7 +18,6 @@ names = []
 
 
 def run():
-    print("hello")
     imagess.clear()
     links.clear()
     names.clear()
