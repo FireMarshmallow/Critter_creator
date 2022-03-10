@@ -19,6 +19,7 @@ headers = {
 request = requests.get(url, headers=headers)
 soup = BeautifulSoup(request.text, "html.parser")
 animals = soup.find_all(class_="col-md-4")
+print(animals)
 global imagess
 global links
 global names
@@ -36,15 +37,17 @@ def run():
         for ras in randompicks:
             link = ras.find("a")["href"]
             name = ras.text
-            link2 = link + "#single-animal-text"
+            link2 = link + "pictures/"
             request2 = requests.get(link2, headers=headers)
             bs = BeautifulSoup(request2.text, "html.parser")
-            images = bs.findAll(class_="center-block")
-            # ing_fill_2 = images.findall("img", {"src": True})
+            images = bs.findAll(class_="full_size_link")
             names.append(name)
             links.append(link)
-            imagess.append(images[2].attrs["data-lazy"])
+            imagess.append(images[0].attrs["href"])
             break
 
     if len(names) != 9 or len(links) != 9 or len(imagess) != 9:
         run()
+
+
+run()
